@@ -1,61 +1,45 @@
 package com.aadfm.itz.donahealth;
-
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Matrix;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.AnimationDrawable;
+import android.support.v4.view.MotionEventCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView img;
+    AnimationDrawable animacion;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        img = (ImageView) findViewById(R.id.imageView);
-        resizeImage(MainActivity.this,R.id.imageView,100,100);
+        animacion = (AnimationDrawable)getResources().getDrawable(R.drawable.animacion);
+        ImageView vista = new ImageView(MainActivity.this);
+        vista.setBackgroundColor(Color.WHITE);
+        vista.setImageDrawable(animacion);
+        animacion.start();
+        setContentView(vista);
 
-
+        vista.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                clase();
+            }
+        });
     }
 
-
-    public static Drawable resizeImage(Context ctx, int resId, int w, int h) {
-
-        // cargamos la imagen de origen
-        Bitmap BitmapOrg = BitmapFactory.decodeResource(ctx.getResources(),resId);
-
-        int width = BitmapOrg.getWidth();
-        int height = BitmapOrg.getHeight();
-        int newWidth = w;
-        int newHeight = h;
-
-        // calculamos el escalado de la imagen destino
-        float scaleWidth = ((float) newWidth) / width;
-        float scaleHeight = ((float) newHeight) / height;
-
-        // para poder manipular la imagen
-        // debemos crear una matriz
-
-        Matrix matrix = new Matrix();
-        // resize the Bitmap
-        matrix.postScale(scaleWidth, scaleHeight);
-
-        // volvemos a crear la imagen con los nuevos valores
-        Bitmap resizedBitmap = Bitmap.createBitmap(BitmapOrg, 0, 0,width, height, matrix, true);
-
-        // si queremos poder mostrar nuestra imagen tenemos que crear un
-        // objeto drawable y así asignarlo a un botón, imageview...
-        return new BitmapDrawable(resizedBitmap);
-
+    public void clase(){
+        Intent intent = new Intent(this, Menu.class);
+        startActivity(intent);
+        finish();
     }
-
 
 
 }

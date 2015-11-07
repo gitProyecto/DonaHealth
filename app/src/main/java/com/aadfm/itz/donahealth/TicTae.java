@@ -25,7 +25,7 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
     int g1=0,g2=0,g3=0,g4=0,g5=0,g6=0,g7=0,g8=0,g9=0;
     String jugador1,jugador2,mensaje;
     int resSelected = 0;
-    int[] recursos = {R.drawable.corazon21,R.drawable.ojo21,R.drawable.intestino21,R.drawable.pulmones21};
+    int[] recursos = {R.drawable.corazon21,R.drawable.orgojo2,R.drawable.intestino21,R.drawable.pulmones21};
     AyudanteBD aBD;
     SQLiteDatabase db = null;
     int juegosGanados = 0;

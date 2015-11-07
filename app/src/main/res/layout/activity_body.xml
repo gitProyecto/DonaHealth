@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/voidd">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:id="@+id/textView1" />
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight=".1"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        >
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/ojo"
+            android:src="@drawable/ojo"
+            android:gravity="center" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight=".1"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        >
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight=".1"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        >
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center" />
+
+    </TableRow>
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight=".1"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        >
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight=".1"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        >
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight=".1"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        >
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center" />
+
+    </TableRow>
+
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight=".1"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        >
+
+    </TableRow>
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight=".1"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        >
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pulmon1"
+            android:src="@drawable/pulmones1"
+            android:gravity="center"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/corazon"
+            android:src="@drawable/corazonani"
+            android:gravity="center"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pulmon2"
+            android:src="@drawable/pulmones12"
+            android:gravity="center"
+            />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight=".1"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        >
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/higado"
+            android:src="@drawable/higado"
+            android:gravity="center"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pancreas"
+            android:src="@drawable/pancreas"
+            android:gravity="center"
+            />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_weight=".1"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        >
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:id="@+id/hueso"
+            android:src="@drawable/hueso"
+            android:gravity="center"
+            />
+
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/intestino"
+            android:src="@drawable/intestino"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_weight=".1"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        >
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:gravity="center"
+            />
+
+    </TableRow>
+
+
+
+
+</LinearLayout>

@@ -1,12 +1,17 @@
 package com.aadfm.itz.donahealth;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.graphics.drawable.AnimationDrawable;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,9 +21,15 @@ import android.database.sqlite.SQLiteDatabase;
 
 public class Body extends AppCompatActivity {
 
+    MediaPlayer mp;
+
     AnimationDrawable corazonA, higadoA, cornia, pancreas, hueso, pulmon, pulmon1, intestino;
     Ayudante aBD;
     SQLiteDatabase db=null;
+    int incre;
+
+    int []audio={R.raw.g1, R.raw.g2 ,R.raw.g1,R.raw.g1,R.raw.g5,R.raw.g6,R.raw.c1,R.raw.c2, R.raw.c3, R.raw.cz2, R.raw.h1,
+            R.raw.hg2};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -122,13 +133,6 @@ public class Body extends AppCompatActivity {
 
     }
 
-
-
-    public void DB(){
-
-
-    }
-
     public String mensaje(String organo){
 
         String cad="";
@@ -169,7 +173,10 @@ public class Body extends AppCompatActivity {
         return num;
     }
 
-
+    public void voz() {
+        mp = MediaPlayer.create(this,audio[incre]);
+        mp.start();
+    }
 
     public void datos(){
 
@@ -218,6 +225,37 @@ public class Body extends AppCompatActivity {
 
 
 
+    public void alerta(){
+
+        AlertDialog alertDialog = new AlertDialog.Builder(
+
+                Body.this).create();
+
+        // Setting Dialog Title
+        alertDialog.setTitle("Alert Dialog");
+
+        // Setting Dialog Message
+        alertDialog.setMessage("Welcome to AndroidHive.info");
+
+        // Setting Icon to Dialog
+        alertDialog.setIcon(R.drawable.acorazon1);
+        alertDialog.setCancelable(false);
+
+        // Setting OK Button
+        alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                // Write your code here to execute after dialog closed
+               mp.stop();
+            }
+        });
+
+        // Showing Alert Message
+        alertDialog.show();
+
+
+    }
+
+
 
 
     public void message(String org){
@@ -233,7 +271,7 @@ public class Body extends AppCompatActivity {
         ImageView image = (ImageView) layout.findViewById(R.id.imgToast);
         image.setImageResource(R.drawable.corazon2);
         TextView text = (TextView) layout.findViewById(R.id.textoToast);
-        text.setText(p+"!");
+        text.setText(p + "!");
 
 
         TextView text2 = (TextView) layout.findViewById(R.id.textoToast1);
@@ -243,14 +281,24 @@ public class Body extends AppCompatActivity {
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.setDuration(Toast.LENGTH_LONG);
         toast.setView(layout);
-        toast.show();
+        //toast.show();
 
 
         toast = new Toast(getApplicationContext());
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.setDuration(Toast.LENGTH_SHORT);
         toast.setView(layout);
-        toast.show();
+        //toast.show();
+
+        alerta();
+
+
+
+        if(incre == audio.length) incre=0;
+        voz();
+        incre++;
+
+
 
 
     }

@@ -574,9 +574,7 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
                         db.execSQL("insert into resultados values ('" + jugador1
                                 + "','" + puntajeX + "','" + jugador2 + "','" + puntajeO + "')");
                         db.close();
-                        Toast.makeText(getApplicationContext(),
-                                "Puntaje de la Batalla Guardada!!",
-                                Toast.LENGTH_LONG).show();
+                        //Toast.makeText(getApplicationContext(),"Puntaje de la Batalla Guardada!!",Toast.LENGTH_LONG).show();
                     } else
                         Toast.makeText(getApplicationContext(), "BD fue null",
                                 Toast.LENGTH_LONG).show();

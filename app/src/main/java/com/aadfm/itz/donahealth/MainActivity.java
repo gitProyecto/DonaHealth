@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clase(){
-        Intent intent = new Intent(this, Menu.class);
+        Intent intent = new Intent(this, Void.class);
         startActivity(intent);
         finish();
     }

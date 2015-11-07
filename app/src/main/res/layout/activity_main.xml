@@ -12,5 +12,5 @@
         android:id="@+id/imageView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/icono" />
+        android:src="@drawable/acorazon1" />
 </RelativeLayout>

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -33,6 +34,11 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
     //int juegosGanados = 0;
 
     SharedPreferences prefs;
+
+    MediaPlayer mp;
+
+    int []audio={R.raw.audcorazon, R.raw.audcornea, R.raw.audintestino, R.raw.audpulmon};
+
 
 
 
@@ -603,6 +609,7 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
 
                 break;
             case R.id.imgBtn1:
+                voz(0);
                 resSelected = 0;
                 msgCorto("Corazon");
                 jugador1 = "Corazon";
@@ -616,6 +623,7 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
                 pulmon.setEnabled(false);
                 break;
             case R.id.imgBtn2:
+                voz(1);
                 resSelected = 1;
                 msgCorto("Cornea");
                 jugador1 = "Cornea";
@@ -629,6 +637,7 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
                 pulmon.setEnabled(false);
                 break;
             case R.id.imgBtn3:
+                voz(2);
                 resSelected = 2;
                 msgCorto("Intestino");
                 jugador1 = "Intestino";
@@ -642,6 +651,7 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
                 pulmon.setEnabled(false);
                 break;
             case R.id.imgBtn4:
+                voz(3);
                 resSelected = 3;
                 msgCorto("Pulmon");
                 jugador1 = "Pulmon";
@@ -696,6 +706,11 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
         }
     }
 
+
+    public void voz(int i) {
+        mp = MediaPlayer.create(this, audio[i]);
+        mp.start();
+    }
 
 
     public void reset() {

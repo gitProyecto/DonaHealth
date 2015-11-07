@@ -2,43 +2,50 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:background="@drawable/fondojuego"
+    android:background="#ffffff"
     android:weightSum="1"
     android:layout_gravity="center"
     android:gravity="center_vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/imageView20"
+        android:background="#ADD8E6"
+        android:gravity="center"/>
 
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:weightSum="1">
+        android:weightSum="1"
+        android:layout_weight=".1"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true">
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/imgBtn1"
-            android:background="@drawable/corazon2"
-            android:layout_weight="0.07" />
+            android:background="@drawable/iconco" />
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/imgBtn2"
-            android:background="@drawable/orgojo2"
-            android:layout_weight="0.09" />
+            android:background="@drawable/iconcor" />
 
         <ImageButton
             android:layout_width="wrap_content"
-            android:layout_height="47dp"
+            android:layout_height="wrap_content"
             android:id="@+id/imgBtn3"
-            android:background="@drawable/intestino2"
-            android:layout_weight="0.07" />
+            android:background="@drawable/iconint" />
 
         <ImageButton
-            android:layout_width="41dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/imgBtn4"
-            android:background="@drawable/pulmones2" />
+            android:background="@drawable/iconpul" />
 
     </TableRow>
 
@@ -63,7 +70,10 @@
         <TableRow
             android:id="@+id/tableRow1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:layout_weight=".1"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true">
 
             <ImageView
                 android:id="@+id/i1"
@@ -89,7 +99,10 @@
         <TableRow
             android:id="@+id/tableRow2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:layout_weight=".1"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true">
 
             <ImageView
                 android:id="@+id/i4"
@@ -115,7 +128,10 @@
         <TableRow
             android:id="@+id/tableRow3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:layout_weight=".1"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true">
 
             <ImageView
                 android:id="@+id/i7"
@@ -152,13 +168,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:weightSum="1">
+        android:weightSum="1"
+
+        android:layout_weight=".1"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true">
+
 
         <Button
-            android:id="@+id/button10"
+            android:id="@+id/regresar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Reset" />
+            android:background="@drawable/retorno"/>
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -166,17 +188,23 @@
             android:text="                                                       "
             android:id="@+id/textView2" />
 
+
         <Button
-            android:id="@+id/regresar"
-            android:layout_width="29dp"
-            android:layout_height="38dp"
-            android:text="&lt;-|"
-            android:textColor="#FFFFFF"
-            android:background="#848484"
-            android:padding="12sp"
-            android:layout_gravity="right"
-            android:layout_weight="0.86" />
+            android:id="@+id/button10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/refresh" />
+
+
     </TableRow>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/imageView2"
+        android:background="#ADD8E6"
+        android:gravity="center"/>
 
 
 </LinearLayout>

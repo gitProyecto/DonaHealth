@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:id="@+id/imageView2"
-        android:background="#f00"
+        android:background="#ADD8E6"
         android:gravity="center"/>
 
     <ImageView
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/opcBody"
         android:layout_gravity="center"
-        android:src="@drawable/ib"
+        android:src="@drawable/ibs"
         android:layout_weight=".1"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"/>
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/opcHeroe"
         android:layout_gravity="center"
-        android:src="@drawable/heroe"
+        android:src="@drawable/heroesss"
         android:layout_weight=".1"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"/>
@@ -56,7 +56,8 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:id="@+id/imageView1"
-        android:background="#f00"
-        android:gravity="center" />
+        android:background="#ADD8E6"
+        android:gravity="center"
+        />
 
 </LinearLayout>

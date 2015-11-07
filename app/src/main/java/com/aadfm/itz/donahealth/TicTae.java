@@ -570,7 +570,7 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
                 }
                 break;
             case R.id.button10:
-                reset();
+                reset2();
                 break;
             case R.id.regresar:
                 try {
@@ -734,6 +734,18 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
         intestino.setEnabled(true);
         pulmon.setEnabled(true);
         players.setText("");
+
+
+    }
+
+    public void reset2 () {
+        reset();
+        corazon.setVisibility(View.VISIBLE);
+        cornea.setVisibility(View.VISIBLE);
+        intestino.setVisibility(View.VISIBLE);
+        pulmon.setVisibility(View.VISIBLE);
+        puntajeO = 0;
+        puntajeX = 0;
     }
 
 }

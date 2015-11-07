@@ -1,6 +1,8 @@
 package com.aadfm.itz.donahealth;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,7 +19,7 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
     Button reinicio, regresar;
     ImageButton corazon,cornea, intestino, pulmon;
     boolean e1,e2,e3,e4,e5,e6,e7,e8,e9;
-    boolean yaEligio = false;
+    boolean ganaste = false;
     TextView players;
     //Boolean[] estadoJuego = new Boolean[9];
 
@@ -28,7 +30,10 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
     int[] recursos = {R.drawable.corazon21,R.drawable.ojo21,R.drawable.intestino21,R.drawable.pulmones21};
     AyudanteBD aBD;
     SQLiteDatabase db = null;
-    int juegosGanados = 0;
+    //int juegosGanados = 0;
+
+    SharedPreferences prefs;
+
 
 
     @Override
@@ -77,6 +82,8 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
         regresar.setOnClickListener(this);
 
         players=(TextView)findViewById(R.id.jugadores);
+
+        prefs = getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
 
     }
 
@@ -553,8 +560,23 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
                             e.getMessage() + "\n\n", Toast.LENGTH_LONG).show();
                 }
 
-                Intent intencion2 = new Intent (this,MainActivity.class);
+                SharedPreferences.Editor editor = prefs.edit();
+                if (ganaste){
+                    try{
+                        editor.putString("estado", "1");
+                        editor.commit();
+                    } catch(Exception e){
+                        msg(e.getMessage());
+                    }
+                }
+                Intent intencion2 = new Intent (this,Menu.class);
                 startActivity(intencion2);
+
+                //Intent i = new Intent (TicTae.this, Menu.class);
+                //i.putExtra("estado", "true");
+                //startActivity(i);
+
+
                 break;
             case R.id.imgBtn1:
                 resSelected = 0;
@@ -625,6 +647,7 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
     public void desbloqueo (int num) {
         //reset();
         if (num==4) {
+            ganaste = true;
             msg("HAZ DESBLOQUEADO EL JUEGO 'BODY'");
             corazon.setVisibility(View.VISIBLE);
             cornea.setVisibility(View.VISIBLE);

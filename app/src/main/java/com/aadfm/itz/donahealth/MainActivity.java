@@ -9,6 +9,7 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
+
     AnimationDrawable animacion;
 
 
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clase(){
-        Intent intent = new Intent(this, Body.class);
+        Intent intent = new Intent(this, Menu.class);
         startActivity(intent);
         finish();
     }

@@ -151,7 +151,7 @@ public class Body extends AppCompatActivity {
                 int numcol=cursor.getColumnCount();
                 int numren=cursor.getCount();
                 while (cursor.moveToNext()){
-                    cad="pues "+cursor.getString(2);
+                    cad=cursor.getString(2);
                 }//while
                 //Toast.makeText(getApplicationContext(),"es "+numAleatorio,Toast.LENGTH_SHORT).show();
 
@@ -186,20 +186,20 @@ public class Body extends AppCompatActivity {
             aBD=new Ayudante(this,"mensajes",null,1);
             db = aBD.getWritableDatabase();
             if (db!=null) {
-                db.execSQL("insert into mensajes values(null,'General','¿Sabias que…? Puedes donar en vida y después de la muerte',1)");
+                db.execSQL("insert into mensajes values(null,'General','Puedes donar en vida y después de la muerte',1)");
                 db.execSQL("insert into mensajes values(null,'General',' El 26 de septiembre, se celebra en México el Día Nacional de Donación y Trasplante de Órganos y Tejidos',2)");
                 db.execSQL("insert into mensajes values(null,'General',' En México cerca de 19 mil personas están en espera de un trasplante, de riñón',3)");
                 db.execSQL("insert into mensajes values(null,'General','¡Una persona que dona sus órganos cuando ya no los necesita puede salvar más de 7 vidas!',4)");
-                db.execSQL("insert into mensajes values(null,'General','¿Sabías que...? Un receptor no debe cumplir necesariamente con la misma edad que el donante',5)");
+                db.execSQL("insert into mensajes values(null,'General','Un receptor no debe cumplir necesariamente con la misma edad que el donante',5)");
                 db.execSQL("insert into mensajes values(null,'General',' Corazón, hígado y riñón se pueden donar desde los dos meses de vida, hasta los 55 años de edad los dos primeros y el riñón hasta 75',6)");
                 db.execSQL("insert into mensajes values(null,'Córnea',' En este año, se han realizado 327 trasplantes de Córnea, de los cuales solo 36 fueron importados ',1)");
-                db.execSQL("insert into mensajes values(null,'Córnea',' ¿Sabías que...? El Estado de México obtuvo licencia para trasplantes de córnea en el 2007',2)");
+                db.execSQL("insert into mensajes values(null,'Córnea',' El Estado de México obtuvo licencia para trasplantes de córnea en el 2007',2)");
                 db.execSQL("insert into mensajes values(null,'Riñón','Este año ha habido sólo 69 trasplantes de riñón',1)");
                 db.execSQL("insert into mensajes values(null,'Riñón',' Este año las donaciones de riñón han aumentado un 97%',2)");
-                db.execSQL("insert into mensajes values(null,'Corazón','¿Sabias que...? El Estado de México obtuvo licencia para trasplantes de corazón en el 2015',1)");
+                db.execSQL("insert into mensajes values(null,'Corazón','El Estado de México obtuvo licencia para trasplantes de corazón en el 2015',1)");
                 db.execSQL("insert into mensajes values(null,'Corazón',' El primer trasplante humano de corazón ocurrió en 1964 en la Universidad de Mississippi en Jackson',2)");
-                db.execSQL("insert into mensajes values(null,'Hígado','¿Sabias que...? El Estado de México obtuvo licencia para trasplantes de hígado en el 2014',1)");
-                db.execSQL("insert into mensajes values(null,'Huesos','¿Sabias que...? Un solo donador puede beneficiar hasta 250 personas que recibirán un trasplante de hueso',1)");
+                db.execSQL("insert into mensajes values(null,'Hígado','El Estado de México obtuvo licencia para trasplantes de hígado en el 2014',1)");
+                db.execSQL("insert into mensajes values(null,'Huesos','Un solo donador puede beneficiar hasta 250 personas que recibirán un trasplante de hueso',1)");
                 db.execSQL("insert into mensajes values(null,'Huesos','La donación de láminas de piel no es deformante ni mutilante',2)");
                 db.execSQL("insert into mensajes values(null,'Piel','El trasplante de piel puede permitir conservar la vida de enfermos para los que no habría ninguna otra opción terapéutica',1)");
                 db.execSQL("insert into mensajes values(null,'Pulmón','El Un donante vivo también puede ser donador de pulmón Cada persona dona un segmento (lóbulo) de su pulmón para formar un pulmón entero para la persona que lo recibe',1)");
@@ -225,17 +225,17 @@ public class Body extends AppCompatActivity {
 
 
 
-    public void alerta(){
+    public void alerta(String menssage){
 
         AlertDialog alertDialog = new AlertDialog.Builder(
 
                 Body.this).create();
 
         // Setting Dialog Title
-        alertDialog.setTitle("Alert Dialog");
+        alertDialog.setTitle("¿ Sabias que ?");
 
         // Setting Dialog Message
-        alertDialog.setMessage("Welcome to AndroidHive.info");
+        alertDialog.setMessage(menssage);
 
         // Setting Icon to Dialog
         alertDialog.setIcon(R.drawable.acorazon1);
@@ -274,7 +274,7 @@ public class Body extends AppCompatActivity {
         text.setText(p + "!");
 
 
-        TextView text2 = (TextView) layout.findViewById(R.id.textoToast1);
+       /* TextView text2 = (TextView) layout.findViewById(R.id.textoToast1);
         text2.setText(org+".");
 
         Toast toast = new Toast(getApplicationContext());
@@ -289,8 +289,8 @@ public class Body extends AppCompatActivity {
         toast.setDuration(Toast.LENGTH_SHORT);
         toast.setView(layout);
         //toast.show();
-
-        alerta();
+*/
+        alerta(p);
 
 
 

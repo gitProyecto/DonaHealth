@@ -16,6 +16,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_weight=".1"
         android:scaleType="fitCenter"
@@ -24,9 +29,9 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/opcTicTae"
+        android:id="@+id/opcBody"
         android:layout_gravity="center"
-        android:src="@drawable/itt"
+        android:src="@drawable/ib"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"/>
 
@@ -38,9 +43,9 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/opcBody"
+            android:id="@+id/opcTicTae"
             android:layout_gravity="center"
-            android:src="@drawable/ib"
+            android:src="@drawable/itt"
             android:layout_weight=".1"
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"/>

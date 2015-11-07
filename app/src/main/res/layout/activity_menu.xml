@@ -1,73 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<TableLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:shrinkColumns="*"  android:stretchColumns="*" android:background="#ffffff">
-    <!-- Row 1 with single column -->
-    <TableRow
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/imageView2"
+        android:background="#f00"
+        android:gravity="center"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:gravity="center_horizontal">
+        android:id="@+id/imageButton"
+        android:layout_gravity="center"
+        android:src="@drawable/cruz"
+        android:layout_weight=".1"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_span="3"
-            android:padding="18dip"
-            android:background="#b0b0b0"
-            android:textColor="#000"/>
-
-    </TableRow>
-
-    <!-- Row 2 with 3 columns -->
-    <TableRow
-        android:id="@+id/tableRow1"
+    <ImageButton
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent">
+        android:id="@+id/imageButton1"
+        android:layout_gravity="center"
+        android:src="@drawable/cruz"
+        android:layout_weight=".1"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"/>
 
-        <TextView
-            android:id="@+id/TextView01"
-            android:layout_width="10dp"
-            android:layout_height="20dp"
-            android:layout_weight="1"
-            android:padding="20dip"
-            android:gravity="center"/>
-
-    </TableRow>
-
-    <!-- Row 3 with 2 columns -->
-    <TableRow
+    <ImageButton
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:gravity="center_horizontal">
+        android:id="@+id/imageButton2"
+        android:layout_gravity="center"
+        android:src="@drawable/cruz"
+        android:layout_weight=".1"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/imageView1"
+        android:background="#f00"
+        android:gravity="center" />
 
 
-        <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:id="@+id/imageButton"
-            android:layout_span="1"
-            android:layout_column="0" />
-
-
-
-    </TableRow>
-
-    <TableRow
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:gravity="center_horizontal">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_span="3"
-            android:padding="18dip"
-            android:background="#b0b0b0"
-            android:textColor="#000"/>
-
-    </TableRow>
-
-</TableLayout>
+</LinearLayout>

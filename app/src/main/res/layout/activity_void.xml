@@ -45,16 +45,24 @@
         android:adjustViewBounds="true"
         >
 
-        <TextView
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_weight=".1"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        >
+
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:id="@+id/imageView3"
-            android:src="@drawable/ojo"
+            android:id="@+id/corazon"
+            android:src="@drawable/corazon"
             android:gravity="center"
             />
 
@@ -70,16 +78,13 @@
         android:adjustViewBounds="true"
         >
 
-        <TextView
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView" />
+
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:id="@+id/imageView3"
-            android:src="@drawable/ojo"
+            android:id="@+id/higado"
+            android:src="@drawable/higado"
             android:gravity="center"
             />
 
@@ -95,41 +100,13 @@
         android:adjustViewBounds="true"
         >
 
-        <TextView
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView" />
+
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:id="@+id/imageView3"
-            android:src="@drawable/ojo"
-            android:gravity="center"
-            />
-
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center"
-        android:layout_weight=".1"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
-        >
-
-        <TextView
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:id="@+id/imageView3"
-            android:src="@drawable/ojo"
+            android:id="@+id/intestino"
+            android:src="@drawable/intestino"
             android:gravity="center"
             />
 

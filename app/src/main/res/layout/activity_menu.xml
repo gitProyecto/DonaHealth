@@ -12,33 +12,42 @@
         android:background="#f00"
         android:gravity="center"/>
 
-    <ImageButton
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/opcTicTae"
         android:layout_gravity="center"
-        android:src="@drawable/cruz"
-        android:layout_weight=".1"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
-        />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/opcBody"
-        android:layout_gravity="center"
-        android:src="@drawable/cruz"
+        android:src="@drawable/itt"
         android:layout_weight=".1"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"/>
 
-    <ImageButton
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/opcBody"
+        android:layout_gravity="center"
+        android:src="@drawable/ib"
+        android:layout_weight=".1"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/opcHeroe"
         android:layout_gravity="center"
-        android:src="@drawable/cruz"
+        android:src="@drawable/heroe"
         android:layout_weight=".1"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"/>
@@ -49,6 +58,5 @@
         android:id="@+id/imageView1"
         android:background="#f00"
         android:gravity="center" />
-
 
 </LinearLayout>

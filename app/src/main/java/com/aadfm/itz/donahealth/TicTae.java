@@ -27,7 +27,7 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
     int g1=0,g2=0,g3=0,g4=0,g5=0,g6=0,g7=0,g8=0,g9=0;
     String jugador1,jugador2,mensaje;
     int resSelected = 0;
-    int[] recursos = {R.drawable.corazon21,R.drawable.orgojo2,R.drawable.intestino21,R.drawable.pulmones21};
+    int[] recursos = {R.drawable.corazon21,R.drawable.ojo21,R.drawable.intestino21,R.drawable.pulmones21};
     AyudanteBD aBD;
     SQLiteDatabase db = null;
     //int juegosGanados = 0;
@@ -116,26 +116,28 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
                         btn1.setEnabled(false);  btn2.setEnabled(false);  btn3.setEnabled(false);
                         btn4.setEnabled(false);  btn5.setEnabled(false);  btn6.setEnabled(false);
                         btn7.setEnabled(false);  btn8.setEnabled(false);  btn9.setEnabled(false);
+                        reset();
                     }else if(g2==2&&g3==2&&g1==2||g7==2&&g4==2&&g1==2||g9==2&&g5==2&&g1==2){
                         Toast t2=Toast.makeText(this,"Gano el jugador "+ jugador2, Toast.LENGTH_LONG);
                         t2.show();
                         puntajeO+=1;
                         inicia(puntajeX + puntajeO);
-
-                        //reset();
                         mensaje="";players.setText("");
                         mensaje = "Jugador "+jugador1 +": "+ puntajeX  +"\nJugador "+jugador2 +" : "+ puntajeO;
                         players.setText(mensaje);
                         btn1.setEnabled(false);  btn2.setEnabled(false);  btn3.setEnabled(false);
                         btn4.setEnabled(false);  btn5.setEnabled(false);  btn6.setEnabled(false);
                         btn7.setEnabled(false);  btn8.setEnabled(false);  btn9.setEnabled(false);
+                        reset();
                     }else if (e1==true&&e2==true&&e3==true&&e4==true&&e5==true&&e6==true&&e7==true&&e8==true&&e9==true){
                         Toast t2=Toast.makeText(this,"El juego se ha empatado", Toast.LENGTH_LONG);
                         t2.show();
+                        reset();
                     }
                 }else{
                     Toast t1=Toast.makeText(this,"La casilla ya esta ocupada", Toast.LENGTH_LONG);
                     t1.show();
+                    reset();
                 }
                 break;
 
@@ -169,6 +171,7 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
                         btn1.setEnabled(false);  btn2.setEnabled(false);  btn3.setEnabled(false);
                         btn4.setEnabled(false);  btn5.setEnabled(false);  btn6.setEnabled(false);
                         btn7.setEnabled(false);  btn8.setEnabled(false);  btn9.setEnabled(false);
+                        reset();
                     }else if(g1==2&&g3==2&&g2==2||g5==2&&g8==2&&g2==2){
                         Toast t2=Toast.makeText(this,"Gano el jugador "+ jugador2, Toast.LENGTH_LONG);
                         t2.show();
@@ -180,9 +183,11 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
                         btn1.setEnabled(false);  btn2.setEnabled(false);  btn3.setEnabled(false);
                         btn4.setEnabled(false);  btn5.setEnabled(false);  btn6.setEnabled(false);
                         btn7.setEnabled(false);  btn8.setEnabled(false);  btn9.setEnabled(false);
+                        reset();
                     }else if (e1==true&&e2==true&&e3==true&&e4==true&&e5==true&&e6==true&&e7==true&&e8==true&&e9==true){
                         Toast t2=Toast.makeText(this,"El juego se ha empatado", Toast.LENGTH_LONG);
                         t2.show();
+                        reset();
                     }
 
                 }else{
@@ -217,6 +222,7 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
                         btn1.setEnabled(false);  btn2.setEnabled(false);  btn3.setEnabled(false);
                         btn4.setEnabled(false);  btn5.setEnabled(false);  btn6.setEnabled(false);
                         btn7.setEnabled(false);  btn8.setEnabled(false);  btn9.setEnabled(false);
+                        reset();
                     }else if(g1==2&&g2==2&&g3==2||g6==2&&g9==2&&g3==2||g7==2&&g5==2&&g3==2){
                         Toast t2=Toast.makeText(this,"Gano el jugador "+ jugador2, Toast.LENGTH_LONG);
                         t2.show();
@@ -229,9 +235,11 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
                         btn1.setEnabled(false);  btn2.setEnabled(false);  btn3.setEnabled(false);
                         btn4.setEnabled(false);  btn5.setEnabled(false);  btn6.setEnabled(false);
                         btn7.setEnabled(false);  btn8.setEnabled(false);  btn9.setEnabled(false);
+                        reset();
                     }else if (e1==true&&e2==true&&e3==true&&e4==true&&e5==true&&e6==true&&e7==true&&e8==true&&e9==true){
                         Toast t2=Toast.makeText(this,"El juego se ha empatado", Toast.LENGTH_LONG);
                         t2.show();
+                        reset();
                     }
 
                 }else{
@@ -266,6 +274,7 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
                         btn1.setEnabled(false);  btn2.setEnabled(false);  btn3.setEnabled(false);
                         btn4.setEnabled(false);  btn5.setEnabled(false);  btn6.setEnabled(false);
                         btn7.setEnabled(false);  btn8.setEnabled(false);  btn9.setEnabled(false);
+                        reset();
                     }else if(g1==2&&g7==2&&g4==2||g5==2&&g6==2&&g4==2){
                         Toast t2=Toast.makeText(this,"Gano el jugador "+ jugador2, Toast.LENGTH_LONG);
                         t2.show();
@@ -278,9 +287,11 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
                         btn1.setEnabled(false);  btn2.setEnabled(false);  btn3.setEnabled(false);
                         btn4.setEnabled(false);  btn5.setEnabled(false);  btn6.setEnabled(false);
                         btn7.setEnabled(false);  btn8.setEnabled(false);  btn9.setEnabled(false);
+                        reset();
                     }else if (e1==true&&e2==true&&e3==true&&e4==true&&e5==true&&e6==true&&e7==true&&e8==true&&e9==true){
                         Toast t2=Toast.makeText(this,"El juego se ha empatado", Toast.LENGTH_LONG);
                         t2.show();
+                        reset();
                     }
 
                 }else{
@@ -316,6 +327,7 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
                         btn1.setEnabled(false);  btn2.setEnabled(false);  btn3.setEnabled(false);
                         btn4.setEnabled(false);  btn5.setEnabled(false);  btn6.setEnabled(false);
                         btn7.setEnabled(false);  btn8.setEnabled(false);  btn9.setEnabled(false);
+                        reset();
                     }else if(g1==2&&g9==2&&g5==2||g3==2&&g7==2&&g5==2||g2==2&&g8==2&&g5==2||g4==2&&g6==2&&g5==2){
                         Toast t2=Toast.makeText(this,"Gano el jugador "+ jugador2, Toast.LENGTH_LONG);
                         t2.show();
@@ -327,9 +339,11 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
                         btn1.setEnabled(false);  btn2.setEnabled(false);  btn3.setEnabled(false);
                         btn4.setEnabled(false);  btn5.setEnabled(false);  btn6.setEnabled(false);
                         btn7.setEnabled(false);  btn8.setEnabled(false);  btn9.setEnabled(false);
+                        reset();
                     }else if (e1==true&&e2==true&&e3==true&&e4==true&&e5==true&&e6==true&&e7==true&&e8==true&&e9==true){
                         Toast t2=Toast.makeText(this,"El juego se ha empatado", Toast.LENGTH_LONG);
                         t2.show();
+                        reset();
                     }
 
                 }else{
@@ -365,6 +379,7 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
                         players.setText(mensaje);btn1.setEnabled(false);  btn2.setEnabled(false);  btn3.setEnabled(false);
                         btn4.setEnabled(false);  btn5.setEnabled(false);  btn6.setEnabled(false);
                         btn7.setEnabled(false);  btn8.setEnabled(false);  btn9.setEnabled(false);
+                        reset();
                     }else if(g4==2&&g5==2&&g6==2||g3==2&&g9==2&&g6==2){
                         Toast t2=Toast.makeText(this,"Gano el jugador "+ jugador2, Toast.LENGTH_LONG);
                         t2.show();
@@ -377,9 +392,11 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
                         btn1.setEnabled(false);  btn2.setEnabled(false);  btn3.setEnabled(false);
                         btn4.setEnabled(false);  btn5.setEnabled(false);  btn6.setEnabled(false);
                         btn7.setEnabled(false);  btn8.setEnabled(false);  btn9.setEnabled(false);
+                        reset();
                     }else if (e1==true&&e2==true&&e3==true&&e4==true&&e5==true&&e6==true&&e7==true&&e8==true&&e9==true){
                         Toast t2=Toast.makeText(this,"El juego se ha empatado", Toast.LENGTH_LONG);
                         t2.show();
+                        reset();
                     }
 
                 }else{
@@ -415,6 +432,7 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
                         btn1.setEnabled(false);  btn2.setEnabled(false);  btn3.setEnabled(false);
                         btn4.setEnabled(false);  btn5.setEnabled(false);  btn6.setEnabled(false);
                         btn7.setEnabled(false);  btn8.setEnabled(false);  btn9.setEnabled(false);
+                        reset();
                     }else if(g1==2&&g4==2&&g7==2||g8==2&&g9==2&&g7==2||g5==2&&g3==2&&g7==2){
                         Toast t2=Toast.makeText(this,"Gano el jugador "+ jugador2, Toast.LENGTH_LONG);
                         t2.show();
@@ -426,9 +444,11 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
                         btn1.setEnabled(false);  btn2.setEnabled(false);  btn3.setEnabled(false);
                         btn4.setEnabled(false);  btn5.setEnabled(false);  btn6.setEnabled(false);
                         btn7.setEnabled(false);  btn8.setEnabled(false);  btn9.setEnabled(false);
+                        reset();
                     }else if (e1==true&&e2==true&&e3==true&&e4==true&&e5==true&&e6==true&&e7==true&&e8==true&&e9==true){
                         Toast t2=Toast.makeText(this,"El juego se ha empatado", Toast.LENGTH_LONG);
                         t2.show();
+                        reset();
                     }
 
                 }else{
@@ -465,6 +485,7 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
                         btn1.setEnabled(false);  btn2.setEnabled(false);  btn3.setEnabled(false);
                         btn4.setEnabled(false);  btn5.setEnabled(false);  btn6.setEnabled(false);
                         btn7.setEnabled(false);  btn8.setEnabled(false);  btn9.setEnabled(false);
+                        reset();
                     }else if(g7==2&&g9==2&&g8==2||g2==2&&g5==2&&g8==2){
                         Toast t2=Toast.makeText(this,"Gano el jugador "+ jugador2, Toast.LENGTH_LONG);
                         t2.show();
@@ -477,9 +498,11 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
                         btn1.setEnabled(false);  btn2.setEnabled(false);  btn3.setEnabled(false);
                         btn4.setEnabled(false);  btn5.setEnabled(false);  btn6.setEnabled(false);
                         btn7.setEnabled(false);  btn8.setEnabled(false);  btn9.setEnabled(false);
+                        reset();
                     }else if (e1==true&&e2==true&&e3==true&&e4==true&&e5==true&&e6==true&&e7==true&&e8==true&&e9==true){
                         Toast t2=Toast.makeText(this,"El juego se ha empatado", Toast.LENGTH_LONG);
                         t2.show();
+                        reset();
                     }
 
                 }else{
@@ -516,6 +539,7 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
                         btn1.setEnabled(false);  btn2.setEnabled(false);  btn3.setEnabled(false);
                         btn4.setEnabled(false);  btn5.setEnabled(false);  btn6.setEnabled(false);
                         btn7.setEnabled(false);  btn8.setEnabled(false);  btn9.setEnabled(false);
+                        reset();
                     }else if(g1==2&&g5==2&&g9==2||g7==2&&g8==2&&g9==2||g3==2&&g6==2&&g9==2){
                         Toast t2=Toast.makeText(this,"Gano el jugador "+ jugador2, Toast.LENGTH_LONG);
                         t2.show();
@@ -527,9 +551,11 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
                         btn1.setEnabled(false);  btn2.setEnabled(false);  btn3.setEnabled(false);
                         btn4.setEnabled(false);  btn5.setEnabled(false);  btn6.setEnabled(false);
                         btn7.setEnabled(false);  btn8.setEnabled(false);  btn9.setEnabled(false);
+                        reset();
                     }else if (e1==true&&e2==true&&e3==true&&e4==true&&e5==true&&e6==true&&e7==true&&e8==true&&e9==true){
                         Toast t2=Toast.makeText(this,"El juego se ha empatado", Toast.LENGTH_LONG);
                         t2.show();
+                        reset();
                     }
 
                 }else{
@@ -696,15 +722,6 @@ public class TicTae extends AppCompatActivity implements OnClickListener {
         pulmon.setEnabled(true);
         players.setText("");
     }
-/*
-    public void reInicio(){
-        msg("Intenta nuevamente");
-        corazon.setVisibility(View.VISIBLE);
-        cornea.setVisibility(View.VISIBLE);
-        intestino.setVisibility(View.VISIBLE);
-        pulmon.setVisibility(View.VISIBLE);
-        reset();
-    }
-    */
+
 }
 

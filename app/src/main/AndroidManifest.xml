@@ -6,11 +6,11 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/acorazon3"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-        <activity android:name=".Body" >
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,7 +20,7 @@
         <activity android:name=".Menu" />
         <activity android:name=".Web" >
         </activity>
-        <activity android:name=".MainActivity" >
+        <activity android:name=".Body" >
         </activity>
         <activity android:name=".TicTae" >
         </activity>

@@ -104,7 +104,7 @@ public class Body extends AppCompatActivity {
 
         vistaI.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                message("Intestino");
+                message("Hígado");
             }
         });
 
@@ -238,7 +238,7 @@ public class Body extends AppCompatActivity {
         alertDialog.setMessage(menssage);
 
         // Setting Icon to Dialog
-        alertDialog.setIcon(R.drawable.acorazon1);
+        alertDialog.setIcon(R.drawable.orgcorazon1);
         alertDialog.setCancelable(false);
 
         // Setting OK Button
